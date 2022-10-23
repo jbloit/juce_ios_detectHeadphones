@@ -69,6 +69,17 @@ void MainComponent::paint (juce::Graphics& g)
     else
         g.fillAll(juce::Colours::red);
     
+    
+    g.setColour (juce::Colours::white);
+    g.setFont (14.0f);
+    
+    if (!headphonePlugged)
+        g.drawText ("No headphones plugged", getLocalBounds(),
+                juce::Justification::centred, true);   // draw some placeholder text
+    else
+        g.drawText ("Headphones plugged", getLocalBounds(),
+                juce::Justification::centred, true);   // draw some placeholder text
+    
 }
 
 void MainComponent::resized()
